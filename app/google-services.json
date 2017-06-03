@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "590377082783",
+    "firebase_url": "https://sdaprojekt.firebaseio.com",
+    "project_id": "sdaprojekt",
+    "storage_bucket": "sdaprojekt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590377082783:android:50d03f6c2623bbd3",
+        "android_client_info": {
+          "package_name": "com.sda.balys.robert.projektsda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590377082783-stu9jv4qrhb750rimb177ebfp5jnkg3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt0lk2IIIYCCzf6A0Tu8s_brlVRpUA8mA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

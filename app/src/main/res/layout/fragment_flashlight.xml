@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context="com.sda.balys.robert.projektsda.fragments.FlashlightFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/flashlight"
+        android:gravity="center"
+        android:text="OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignEnd="@+id/progressBar"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment"
+        android:layout_marginBottom="65dp"
+        android:layout_above="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar" />
+
+</RelativeLayout>
