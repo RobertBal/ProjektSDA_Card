@@ -181,10 +181,15 @@ public class LocalFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         MapsInitializer.initialize(getContext());
         mGoogleMap = googleMap;
-        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        googleMap.addMarker(new MarkerOptions().position(new LatLng(latitude,longitude)).title("Statua").snippet("Ihome"));
+        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latitude,longitude)).title("Statua").snippet("Ihome"));
         CameraPosition Liberty = CameraPosition.builder().target(new LatLng(latitude,longitude)).zoom(16).bearing(0).tilt(45).build();
-        googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
+        mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
+
+//        googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+//        googleMap.addMarker(new MarkerOptions().position(new LatLng(latitude,longitude)).title("Statua").snippet("Ihome"));
+//        CameraPosition Liberty = CameraPosition.builder().target(new LatLng(latitude,longitude)).zoom(16).bearing(0).tilt(45).build();
+//        googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
     }
 
 

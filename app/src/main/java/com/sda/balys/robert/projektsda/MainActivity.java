@@ -11,6 +11,7 @@ import android.view.WindowManager;
 
 import com.sda.balys.robert.projektsda.adapters.MyPageAdapter;
 import com.sda.balys.robert.projektsda.fragments.BatteryFragment;
+import com.sda.balys.robert.projektsda.fragments.CardsGameFragment;
 import com.sda.balys.robert.projektsda.fragments.FlashlightFragment;
 import com.sda.balys.robert.projektsda.fragments.LocalFragment;
 import com.sda.balys.robert.projektsda.fragments.StopwatchFragment;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int TAB_STOPWATCH_POSITION = 2;
     private static final int TAB_LOCAL_POSITION=3;
     private static final int TAB_AUDIO_POSITION=4;
+    private static final int TAB_CARD_POSITION=5;
     @BindView(R.id.view_pager)
     ViewPager viewPager;
     @BindView(R.id.tab_layout)
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private StopwatchFragment stopwatchFragment;
     private LocalFragment loclaFragment;
     private AudioFragment audioFragment;
+    private CardsGameFragment cardFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,11 +76,13 @@ public class MainActivity extends AppCompatActivity {
         stopwatchFragment = new StopwatchFragment();
         loclaFragment = new LocalFragment();
         audioFragment = new AudioFragment();
+        cardFragment = new CardsGameFragment();
         fragments.add(batteryFragment);
         fragments.add(flashlightFragment);
         fragments.add(stopwatchFragment);
         fragments.add(loclaFragment);
         fragments.add(audioFragment);
+        fragments.add(cardFragment);
         MyPageAdapter adapter = new MyPageAdapter(getSupportFragmentManager(), fragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -91,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                 .setIcon(getDrawable(R.drawable.ic_locla_black_24dp));
         tabLayout.getTabAt(TAB_AUDIO_POSITION)
                 .setIcon(getDrawable(R.drawable.ic_audio_24dp));
+        tabLayout.getTabAt(TAB_CARD_POSITION)
+                .setIcon(getDrawable(R.drawable.ic_hearts));
 
 
     }
